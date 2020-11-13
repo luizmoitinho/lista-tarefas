@@ -16,23 +16,21 @@ export default class Tarefas extends Component{
 
   render (){
     return(
-        <Fragment>
-          <h3>
-            Lista de tarefas
-          </h3>
- 
+        <Fragment> 
           <div class="flex center-x center-y">
             <input onChange={this.handleChange} placeholder="Digite uma tarefa a ser feita"
                    value={this.state.tarefa} type="text"/>
             <button class="btn btn-add" onClick={this.addNote}>Adicionar</button>
             <button class="btn btn-remove" onClick={this.removeAllNotes}>Limpar</button>
           </div>
- 
+          
           <div  class="flex center-x center-y">
+
             <ul className="lista">
               {
                 this.state.tarefas.map(tarefa => 
                 <li>
+                  <input type="checkbox"/>
                   {tarefa}
                   </li> )
               }
