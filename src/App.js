@@ -2,6 +2,7 @@ import React,  {Component} from 'react';
 
 import './App.css';
 
+
 import Tarefas from './Componentes/Tarefas';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <header>
         <h1>Lista de Tarefas</h1>
       </header>
-      <Tarefas className="container" />
+      <Tarefas class="Tarefas"/>
     </div>
   );
 }
