@@ -11,6 +11,7 @@ export default class Tarefas extends Component{
       };
     this.handleChange = this.handleChange.bind(this);
     this.addNote = this.addNote.bind(this)
+    this.removeAllNotes = this.removeAllNotes.bind(this)
   }
 
   render (){
@@ -23,7 +24,8 @@ export default class Tarefas extends Component{
           <div class="flex center-x center-y">
             <input onChange={this.handleChange} placeholder="Digite uma tarefa a ser feita"
                    value={this.state.tarefa} type="text"/>
-            <button onClick={this.addNote}>Adicionar</button>
+            <button class="btn btn-add" onClick={this.addNote}>Adicionar</button>
+            <button class="btn btn-remove" onClick={this.removeAllNotes}>Limpar</button>
           </div>
  
           <div  class="flex center-x center-y">
@@ -35,8 +37,9 @@ export default class Tarefas extends Component{
                   </li> )
               }
             </ul>
+           
           </div>
-         
+
         </Fragment>
     )
   }
@@ -49,6 +52,13 @@ export default class Tarefas extends Component{
     this.setState({
       tarefa:"",
       tarefas : [].concat(this.state.tarefas,this.state.tarefa)
+    })   
+  }
+
+  removeAllNotes(){
+    this.setState({
+      tarefa:"",
+      tarefas : []
     })   
   }
 

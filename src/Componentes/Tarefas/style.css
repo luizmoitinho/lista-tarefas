@@ -2,14 +2,7 @@ input{
   height: 30px;
   width: 300px;
 }
-button{
-  margin-left:2px;
-  height: 35px;
-  border: none;
-  background-color: #17a2b8;
-  color: #fff;
-  font-weight: 800;
-}
+
 
 ul,ol{
   list-style: none;
@@ -24,15 +17,21 @@ ul,ol{
   flex-direction: column;
   justify-content: flex-start; 
 }
+.btn{
+  margin-left:2px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 800;
+}
 
 .btn-add{
-  background-color: rgb(115, 177, 232);
-  height: 30px;
-  padding: 2px;
-  cursor: pointer;
-  color:#fff;
-  font-size: 15px;
-  border: 1px solid #ccc;
+  background-color: #17a2b8;
+}
+
+.btn-remove{
+  background-color: #dc3545;
 }
 
 .flex{
