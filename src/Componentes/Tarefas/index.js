@@ -1,4 +1,4 @@
-import React,{Component,Fragment} from 'react';
+import React,{Component} from 'react';
 import './style.css';
 
 export default class Tarefas extends Component{
@@ -17,19 +17,18 @@ export default class Tarefas extends Component{
   render (){
     return(
         <div> 
-
-          <div class="flex">
+          <div className="flex">
             <input onChange={this.handleChange} placeholder="Digite uma tarefa a ser feita"
                    value={this.state.tarefa} type="text"/>
-            <button class="btn btn-add" onClick={this.addNote}>Adicionar</button>
-            <button class="btn btn-remove" onClick={this.removeAllNotes}>Limpar</button>
+            <button className="btn btn-add" onClick={this.addNote}>Adicionar</button>
+            <button className="btn btn-remove" onClick={this.removeAllNotes}>Limpar</button>
           </div>
           <ul className="lista">
             {
-              this.state.tarefas.map(tarefa => 
-              <li>
-                <input  type="checkbox"/>
-                {tarefa}
+              this.state.tarefas.map( (item, key) => 
+                <li key={key}>
+                  <input  type="checkbox"/>
+                  {item}
                 </li> )
             }
           </ul>
@@ -43,6 +42,8 @@ export default class Tarefas extends Component{
   }
 
   addNote(){
+    if(this.state.tarefa=="")
+      return 0;
     this.setState({
       tarefa:"",
       tarefas : [].concat(this.state.tarefas,this.state.tarefa)

@@ -1,4 +1,4 @@
-import React,  {Component} from 'react';
+import React from 'react';
 
 import './App.css';
 
@@ -11,7 +11,7 @@ function App() {
       <header>
         <h1>Lista de Tarefas</h1>
       </header>
-      <Tarefas class="Tarefas"/>
+      <Tarefas className="Tarefas"/>
     </div>
   );
 }
