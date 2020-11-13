@@ -1,0 +1,53 @@
+input{
+  height: 30px;
+  width: 300px;
+}
+button{
+  margin-left:2px;
+  height: 35px;
+  border: none;
+  background-color: #17a2b8;
+  color: #fff;
+  font-weight: 800;
+}
+
+ul,ol{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+.lista{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+}
+
+.btn-add{
+  background-color: rgb(115, 177, 232);
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+  color:#fff;
+  font-size: 15px;
+  border: 1px solid #ccc;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.center-x{
+  justify-content: center;
+}
+.center-y{
+  align-items: center;
+}
